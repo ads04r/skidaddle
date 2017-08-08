@@ -1,8 +1,6 @@
 Skidaddle
 =========
 
-Fun with script kiddies.
-
 I manage several websites, at the file level. None of these sites uses Wordpress, yet
 I regularly get 404s in the logs from people attempting to access /wp-admin/ and
 /wp-login.php on all the sites I manage. I guess these are hits from morons running
@@ -19,4 +17,7 @@ the script kiddies are wasting time trying to break into my (non-Wordpress) site
 they're not trying to break into other people's actual Wordpress sites, so I'm
 serving the greater good.
 
+Example
+-------
 
+* https://www.flarpyland.com/wp-login.php
