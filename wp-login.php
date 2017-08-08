@@ -2,6 +2,8 @@
 
 if(array_key_exists("redirect_to", $_POST)) { header("Location: " . $_POST['redirect_to']); exit(); }
 
+$host = $_SERVER['HTTP_HOST'];
+
 ?><!DOCTYPE html>
 <!--[if IE 8]>
 		<html xmlns="http://www.w3.org/1999/xhtml" class="ie8" lang="en-US">
@@ -44,14 +46,14 @@ if(array_key_exists("redirect_to", $_POST)) { header("Location: " . $_POST['redi
 	for (var i = 0; i < evts.length; i++) {
 		addEvent(evts[i], logHuman);
 	}
-})('//www.flarpyland.com/?wordfence_logHuman=1&hid=C225FE5A0862CD136288A07C9B5B945D');
+})('//<?php print($_SERVER['HTTP_HOST']); ?>/?wordfence_logHuman=1&hid=C225FE5A0862CD136288A07C9B5B945D');
 </script><meta name="robots" content="noindex,follow">
 	<script type="text/javascript" async="" src="wp-admin/a"></script></head>
 	<body class="login login-action-login wp-core-ui  locale-en-us">
 	<div id="login">
-		<h1><a href="https://www.flarpyland.com/" title="Wordpress Blogs" tabindex="-1">Wordpress Blogs</a></h1>
+		<h1><a href="//<?php print($_SERVER['HTTP_HOST']); ?>/" title="Wordpress Blogs" tabindex="-1">Wordpress Blogs</a></h1>
 	
-<form name="loginform" id="loginform" action="https://www.flarpyland.com/wp-login.php" method="post">
+<form name="loginform" id="loginform" action="//<?php print($_SERVER['HTTP_HOST']); ?>/wp-login.php" method="post">
 	<p>
 		<label for="user_login">Username or Email<br>
 		<input name="log" id="user_login" class="input" size="20" type="text"></label>
@@ -63,13 +65,13 @@ if(array_key_exists("redirect_to", $_POST)) { header("Location: " . $_POST['redi
 		<p class="forgetmenot"><label for="rememberme"><input name="rememberme" id="rememberme" value="forever" type="checkbox"> Remember Me</label></p>
 	<p class="submit">
 		<input name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Log In" type="submit">
-		<input name="redirect_to" value="https://www.flarpyland.com/wp-admin/" type="hidden">
+		<input name="redirect_to" value="//<?php print($_SERVER['HTTP_HOST']); ?>/wp-admin/" type="hidden">
 		<input name="testcookie" value="1" type="hidden">
 	</p>
 </form>
 
 <p id="nav">
-	<a href="https://www.flarpyland.com/wp-login.php?action=lostpassword">Lost your password?</a>
+	<a href="//<?php print($_SERVER['HTTP_HOST']); ?>/wp-login.php?action=lostpassword">Lost your password?</a>
 </p>
 
 <script type="text/javascript">
@@ -86,7 +88,7 @@ wp_attempt_focus();
 if(typeof wpOnload=='function')wpOnload();
 </script>
 
-	<p id="backtoblog"><a href="http://www.flarpyland.com/">← Back to Wordpress Blogs</a></p>
+	<p id="backtoblog"><a href="//<?php print($_SERVER['HTTP_HOST']); ?>/">← Back to Wordpress Blogs</a></p>
 	
 	</div>
 
